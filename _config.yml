@@ -1,0 +1,29 @@
+title: BuildApps.ca
+description: Mobile development, explained.
+url: ""
+baseurl: ""
+markdown: kramdown
+
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  platforms:
+    output: true
+    permalink: /platforms/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
+  shipping:
+    output: true
+    permalink: /shipping/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

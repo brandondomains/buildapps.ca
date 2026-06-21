@@ -1,0 +1,41 @@
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>{{ site.title }}</strong>
+          <span>{{ site.description }}</span>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        {%- for item in site.data.nav -%}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {%- endfor -%}
+      </nav>
+
+      <div class="navright">
+        <button class="btn burger" id="burger" aria-expanded="false" aria-controls="mobilePanel" title="Menu">
+          {% include icons.html name="menu" %} Menu
+        </button>
+
+        <button class="btn" id="scrollSearch" title="Jump to search">
+          {% include icons.html name="search" %} Search
+        </button>
+
+        <a class="btn primary" href="#newsletter" title="Subscribe">
+          {% include icons.html name="mail" %} Subscribe
+        </a>
+      </div>
+    </div>
+
+    <div class="mobilePanel" id="mobilePanel">
+      <div class="stack">
+        {%- for item in site.data.nav -%}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</header>

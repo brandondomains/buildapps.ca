@@ -1,0 +1,29 @@
+{%- comment -%}
+Inline SVG icons. Use via: {% include icons.html name="search" %}
+{%- endcomment -%}
+{%- assign n = include.name | default: "" -%}
+{%- case n -%}
+{%- when "search" -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2"/>
+  <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+{%- when "menu" -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+{%- when "mail" -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" stroke="currentColor" stroke-width="2"/>
+  <path d="m5.5 7 6.5 5 6.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{%- when "down" -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="m7 14 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{%- when "chevron" -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path d="M9 18 15 12 9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{%- else -%}{%- endcase -%}
